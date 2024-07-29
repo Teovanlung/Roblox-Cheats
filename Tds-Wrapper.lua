@@ -38,7 +38,7 @@ end
 function Tds:Place(Tower, Position)
   RF:InvokeServer("Troops", "Place", Tower, {["Rotation"] = CFrame.new(0, 0, 0), ["Position"] = Position})
   Counter += 1
-  v.Name = tostring(Counter)
+  workspace:WaitForChild("Towers"):FindFirstChild("Default").Name = tostring(Counter)
 end
 
 function Tds:Upgrade(Tower)
@@ -48,3 +48,4 @@ end
   
 return Tds
 
+--loadstring(game:HttpGet("https://raw.githubusercontent.com/Teovanlung/Roblox-Cheats/main/Tds-Wrapper.lua"))()
